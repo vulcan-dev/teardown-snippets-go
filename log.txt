@@ -1,0 +1,3394 @@
+[Input] Name: name
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Parameter name
+
+[Input] Name: default
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Default parameter value
+
+[Out] Name: value
+[Out] Type: number
+[Out] Desc: Parameter value
+===== GetIntParam =====
+
+[Input] Name: name
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Parameter name
+
+[Input] Name: default
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Default parameter value
+
+[Out] Name: value
+[Out] Type: number
+[Out] Desc: Parameter value
+===== GetFloatParam =====
+
+[Input] Name: name
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Parameter name
+
+[Input] Name: default
+[Input] Type: boolean
+[Input] Optional: false
+[Input] Description: Default parameter value
+
+[Out] Name: value
+[Out] Type: boolean
+[Out] Desc: Parameter value
+===== GetBoolParam =====
+
+[Input] Name: name
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Parameter name
+
+[Input] Name: default
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Default parameter value
+
+[Out] Name: value
+[Out] Type: string
+[Out] Desc: Parameter value
+===== GetStringParam =====
+
+[Out] Name: version
+[Out] Type: string
+[Out] Desc: Dot separated string of current version of the game
+===== GetVersion =====
+
+[Input] Name: version
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Reference version
+
+[Out] Name: match
+[Out] Type: boolean
+[Out] Desc: True if current version is at least provided one
+===== HasVersion =====
+
+[Out] Name: time
+[Out] Type: number
+[Out] Desc: The time in seconds since level was started
+===== GetTime =====
+
+[Out] Name: dt
+[Out] Type: number
+[Out] Desc: The timestep in seconds
+===== GetTimeStep =====
+
+[Out] Name: name
+[Out] Type: string
+[Out] Desc: Name of last pressed key, empty if no key is pressed
+===== InputLastPressedKey =====
+
+[Input] Name: input
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: The input identifier
+
+[Out] Name: pressed
+[Out] Type: boolean
+[Out] Desc: True if input was pressed during last frame
+===== InputPressed =====
+
+[Input] Name: input
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: The input identifier
+
+[Out] Name: pressed
+[Out] Type: boolean
+[Out] Desc: True if input was released during last frame
+===== InputReleased =====
+
+[Input] Name: input
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: The input identifier
+
+[Out] Name: pressed
+[Out] Type: boolean
+[Out] Desc: True if input is currently held down
+===== InputDown =====
+
+[Input] Name: input
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: The input identifier
+
+[Out] Name: value
+[Out] Type: number
+[Out] Desc: Depends on input type
+===== InputValue =====
+
+[Input] Name: variable
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Name of number variable in the global context
+
+[Input] Name: value
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: The new value
+
+[Input] Name: transition
+[Input] Type: string
+[Input] Optional: true
+[Input] Description: Transition type. See description.
+
+[Input] Name: time
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Transition time (seconds)
+
+===== SetValue =====
+
+[Input] Name: mission
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: An identifier of your choice
+
+[Input] Name: path
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Path to level XML file
+
+[Input] Name: layers
+[Input] Type: string
+[Input] Optional: true
+[Input] Description: Active layers. Default is no layers.
+
+===== StartLevel =====
+
+[Input] Name: paused
+[Input] Type: boolean
+[Input] Optional: false
+[Input] Description: True if game should be paused
+
+===== SetPaused =====
+
+
+== INVALID ==
+Restart
+
+
+== INVALID ==
+Menu
+
+[Input] Name: key
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Registry key to clear
+
+===== ClearKey =====
+
+[Input] Name: parent
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: The parent registry key
+
+[Out] Name: children
+[Out] Type: table
+[Out] Desc: Indexed table of strings with child keys
+===== ListKeys =====
+
+[Input] Name: key
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Registry key
+
+[Out] Name: exists
+[Out] Type: boolean
+[Out] Desc: True if key exists
+===== HasKey =====
+
+[Input] Name: key
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Registry key
+
+[Input] Name: value
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Desired value
+
+===== SetInt =====
+
+[Input] Name: key
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Registry key
+
+[Out] Name: value
+[Out] Type: number
+[Out] Desc: Integer value of registry node or zero if not found
+===== GetInt =====
+
+[Input] Name: key
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Registry key
+
+[Input] Name: value
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Desired value
+
+===== SetFloat =====
+
+[Input] Name: key
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Registry key
+
+[Out] Name: value
+[Out] Type: number
+[Out] Desc: Float value of registry node or zero if not found
+===== GetFloat =====
+
+[Input] Name: key
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Registry key
+
+[Input] Name: value
+[Input] Type: boolean
+[Input] Optional: false
+[Input] Description: Desired value
+
+===== SetBool =====
+
+[Input] Name: key
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Registry key
+
+[Out] Name: value
+[Out] Type: boolean
+[Out] Desc: Boolean value of registry node or false if not found
+===== GetBool =====
+
+[Input] Name: key
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Registry key
+
+[Input] Name: value
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Desired value
+
+===== SetString =====
+
+[Input] Name: key
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Registry key
+
+[Out] Name: value
+[Out] Type: string
+[Out] Desc: String value of registry node or '' if not found
+===== GetString =====
+
+[Input] Name: x
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: X value
+
+[Input] Name: y
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Y value
+
+[Input] Name: z
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Z value
+
+[Out] Name: vec
+[Out] Type: table
+[Out] Desc: New vector
+===== Vec =====
+
+[Input] Name: org
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: A vector
+
+[Out] Name: new
+[Out] Type: table
+[Out] Desc: Copy of org vector
+===== VecCopy =====
+
+[Input] Name: vec
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: A vector
+
+[Out] Name: length
+[Out] Type: number
+[Out] Desc: Length (magnitude) of the vector
+===== VecLength =====
+
+[Input] Name: vec
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: A vector
+
+[Out] Name: norm
+[Out] Type: table
+[Out] Desc: A vector of length 1.0
+===== VecNormalize =====
+
+[Input] Name: vec
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: A vector
+
+[Input] Name: scale
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: A scale factor
+
+[Out] Name: norm
+[Out] Type: table
+[Out] Desc: A scaled version of input vector
+===== VecScale =====
+
+[Input] Name: a
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector
+
+[Input] Name: b
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector
+
+[Out] Name: c
+[Out] Type: table
+[Out] Desc: New vector with sum of a and b
+===== VecAdd =====
+
+[Input] Name: a
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector
+
+[Input] Name: b
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector
+
+[Out] Name: c
+[Out] Type: table
+[Out] Desc: New vector representing a-b
+===== VecSub =====
+
+[Input] Name: a
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector
+
+[Input] Name: b
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector
+
+[Out] Name: c
+[Out] Type: number
+[Out] Desc: Dot product of a and b
+===== VecDot =====
+
+[Input] Name: a
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector
+
+[Input] Name: b
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector
+
+[Out] Name: c
+[Out] Type: table
+[Out] Desc: Cross product of a and b (also called vector product)
+===== VecCross =====
+
+[Input] Name: a
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector
+
+[Input] Name: b
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector
+
+[Input] Name: t
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: fraction (usually between 0.0 and 1.0)
+
+[Out] Name: c
+[Out] Type: table
+[Out] Desc: Linearly interpolated vector between a and b, using t
+===== VecLerp =====
+
+[Input] Name: x
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: X value
+
+[Input] Name: y
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Y value
+
+[Input] Name: z
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Z value
+
+[Input] Name: w
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: W value
+
+[Out] Name: quat
+[Out] Type: table
+[Out] Desc: New quaternion
+===== Quat =====
+
+[Input] Name: org
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Quaternion
+
+[Out] Name: new
+[Out] Type: table
+[Out] Desc: Copy of org quaternion
+===== QuatCopy =====
+
+[Input] Name: axis
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Rotation axis, unit vector
+
+[Input] Name: angle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Rotation angle in degrees
+
+[Out] Name: quat
+[Out] Type: table
+[Out] Desc: New quaternion
+===== QuatAxisAngle =====
+
+[Input] Name: x
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Angle around X axis in degrees, sometimes also called roll or bank
+
+[Input] Name: y
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Angle around Y axis in degrees, sometimes also called yaw or heading
+
+[Input] Name: z
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Angle around Z axis in degrees, sometimes also called pitch or attitude
+
+[Out] Name: quat
+[Out] Type: table
+[Out] Desc: New quaternion
+===== QuatEuler =====
+
+[Input] Name: eye
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector representing the camera location
+
+[Input] Name: target
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector representing the point to look at
+
+[Out] Name: quat
+[Out] Type: table
+[Out] Desc: New quaternion
+===== QuatLookAt =====
+
+[Input] Name: a
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Quaternion
+
+[Input] Name: b
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Quaternion
+
+[Input] Name: t
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: fraction (usually between 0.0 and 1.0)
+
+[Out] Name: c
+[Out] Type: table
+[Out] Desc: New quaternion
+===== QuatSlerp =====
+
+[Input] Name: a
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Quaternion
+
+[Input] Name: b
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Quaternion
+
+[Out] Name: c
+[Out] Type: table
+[Out] Desc: New quaternion
+===== QuatRotateQuat =====
+
+[Input] Name: pos
+[Input] Type: table
+[Input] Optional: true
+[Input] Description: Vector representing transform position
+
+[Input] Name: rot
+[Input] Type: table
+[Input] Optional: true
+[Input] Description: Quaternion representing transform rotation
+
+[Out] Name: transform
+[Out] Type: table
+[Out] Desc: New transform
+===== Transform =====
+
+[Input] Name: org
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Transform
+
+[Out] Name: new
+[Out] Type: table
+[Out] Desc: Copy of org transform
+===== TransformCopy =====
+
+[Input] Name: parent
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Transform
+
+[Input] Name: child
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Transform
+
+[Out] Name: transform
+[Out] Type: table
+[Out] Desc: New transform
+===== TransformToParentTransform =====
+
+[Input] Name: parent
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Transform
+
+[Input] Name: child
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Transform
+
+[Out] Name: transform
+[Out] Type: table
+[Out] Desc: New transform
+===== TransformToLocalTransform =====
+
+[Input] Name: t
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Transform
+
+[Input] Name: v
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector
+
+[Out] Name: r
+[Out] Type: table
+[Out] Desc: Transformed vector
+===== TransformToParentVec =====
+
+[Input] Name: t
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Transform
+
+[Input] Name: v
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector
+
+[Out] Name: r
+[Out] Type: table
+[Out] Desc: Transformed vector
+===== TransformToLocalVec =====
+
+[Input] Name: t
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Transform
+
+[Input] Name: p
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector representing position
+
+[Out] Name: r
+[Out] Type: table
+[Out] Desc: Transformed position
+===== TransformToParentPoint =====
+
+[Input] Name: t
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Transform
+
+[Input] Name: p
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector representing position
+
+[Out] Name: r
+[Out] Type: table
+[Out] Desc: Transformed position
+===== TransformToLocalPoint =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Entity handle
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: value
+[Input] Type: string
+[Input] Optional: true
+[Input] Description: Tag value
+
+===== SetTag =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Entity handle
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+===== RemoveTag =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Entity handle
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Out] Name: exists
+[Out] Type: boolean
+[Out] Desc: Returns true if entity has tag
+===== HasTag =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Entity handle
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Out] Name: value
+[Out] Type: string
+[Out] Desc: Returns the tag value, if any. Empty string otherwise.
+===== GetTagValue =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Entity handle
+
+[Out] Name: description
+[Out] Type: string
+[Out] Desc: The description string
+===== GetDescription =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Entity handle
+
+[Input] Name: description
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: The description string
+
+===== SetDescription =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Entity handle
+
+===== Delete =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Entity handle
+
+[Out] Name: exists
+[Out] Type: boolean
+[Out] Desc: Returns true if the entity pointed to by handle still exists
+===== IsHandleValid =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to first body with specified tag or zero if not found
+===== FindBody =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: list
+[Out] Type: table
+[Out] Desc: Indexed table with handles to all bodies with specified tag
+===== FindBodies =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+[Out] Name: transform
+[Out] Type: table
+[Out] Desc: Transform of the body
+===== GetBodyTransform =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+[Input] Name: transform
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Desired transform
+
+===== SetBodyTransform =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+[Out] Name: mass
+[Out] Type: number
+[Out] Desc: Body mass. Static bodies always return zero mass.
+===== GetBodyMass =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+[Out] Name: dynamic
+[Out] Type: boolean
+[Out] Desc: Return true if body is dynamic
+===== IsBodyDynamic =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+[Input] Name: dynamic
+[Input] Type: boolean
+[Input] Optional: false
+[Input] Description: True for dynamic. False for static.
+
+===== SetBodyDynamic =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle (should be a dynamic body)
+
+[Input] Name: velocity
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector with linear velocity
+
+===== SetBodyVelocity =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle (should be a dynamic body)
+
+[Out] Name: velocity
+[Out] Type: table
+[Out] Desc: Linear velocity as vector
+===== GetBodyVelocity =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle (should be a dynamic body)
+
+[Input] Name: pos
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: World space point as vector
+
+[Out] Name: velocity
+[Out] Type: table
+[Out] Desc: Linear velocity on body at pos as vector
+===== GetBodyVelocityAtPos =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle (should be a dynamic body)
+
+[Input] Name: angVel
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Vector with angular velocity
+
+===== SetBodyAngularVelocity =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle (should be a dynamic body)
+
+[Out] Name: angVel
+[Out] Type: table
+[Out] Desc: Angular velocity as vector
+===== GetBodyAngularVelocity =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+[Out] Name: active
+[Out] Type: boolean
+[Out] Desc: Return true if body is active
+===== IsBodyActive =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle (should be a dynamic body)
+
+[Input] Name: position
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: World space position as vector
+
+[Input] Name: velocity
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: World space impulse as vector
+
+===== ApplyBodyImpulse =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+[Out] Name: list
+[Out] Type: table
+[Out] Desc: Indexed table of shape handles
+===== GetBodyShapes =====
+
+[Input] Name: body
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Get parent vehicle for body, or zero if not part of vehicle
+===== GetBodyVehicle =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+[Out] Name: max
+[Out] Type: table
+[Out] Desc: Vector representing the AABB upper bound
+===== GetBodyBounds =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+[Out] Name: point
+[Out] Type: table
+[Out] Desc: Vector representing local center of mass in body space
+===== GetBodyCenterOfMass =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+[Input] Name: maxDist
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Maximum visible distance
+
+[Input] Name: rejectTransparent
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: See through transparent materials. Default false.
+
+[Out] Name: visible
+[Out] Type: boolean
+[Out] Desc: Return true if body is visible
+===== IsBodyVisible =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+[Out] Name: broken
+[Out] Type: boolean
+[Out] Desc: Return true if body is broken
+===== IsBodyBroken =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+[Out] Name: result
+[Out] Type: boolean
+[Out] Desc: Return true if body is in any way connected to a static body
+===== IsBodyJointedToStatic =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+[Input] Name: r
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Red
+
+[Input] Name: g
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Green
+
+[Input] Name: b
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Blue
+
+[Input] Name: a
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Alpha
+
+===== DrawBodyOutline =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+[Input] Name: amount
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Amount
+
+===== DrawBodyHighlight =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to first shape with specified tag or zero if not found
+===== FindShape =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: list
+[Out] Type: table
+[Out] Desc: Indexed table with handles to all shapes with specified tag
+===== FindShapes =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Out] Name: transform
+[Out] Type: table
+[Out] Desc: Return shape transform in body space
+===== GetShapeLocalTransform =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Input] Name: transform
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Shape transform in body space
+
+===== SetShapeLocalTransform =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Out] Name: transform
+[Out] Type: table
+[Out] Desc: Return shape transform in world space
+===== GetShapeWorldTransform =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Body handle
+===== GetShapeBody =====
+
+[Input] Name: shape
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Out] Name: list
+[Out] Type: table
+[Out] Desc: Indexed table with joints connected to shape
+===== GetShapeJoints =====
+
+[Input] Name: shape
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Out] Name: list
+[Out] Type: table
+[Out] Desc: Indexed table of lights owned by shape
+===== GetShapeLights =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Out] Name: max
+[Out] Type: table
+[Out] Desc: Vector representing the AABB upper bound
+===== GetShapeBounds =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Input] Name: scale
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Scale factor for emissiveness
+
+===== SetShapeEmissiveScale =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Input] Name: pos
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Position in world space
+
+[Out] Name: a
+[Out] Type: number
+[Out] Desc: Alpha
+===== GetShapeMaterialAtPosition =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Out] Name: zsize
+[Out] Type: number
+[Out] Desc: Size in voxels along z axis
+===== GetShapeSize =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Out] Name: count
+[Out] Type: number
+[Out] Desc: Number of voxels in shape
+===== GetShapeVoxelCount =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Input] Name: maxDist
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Maximum visible distance
+
+[Input] Name: rejectTransparent
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: See through transparent materials. Default false.
+
+[Out] Name: visible
+[Out] Type: boolean
+[Out] Desc: Return true if shape is visible
+===== IsShapeVisible =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Out] Name: broken
+[Out] Type: boolean
+[Out] Desc: Return true if shape is broken
+===== IsShapeBroken =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Input] Name: r
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Red
+
+[Input] Name: g
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Green
+
+[Input] Name: b
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Blue
+
+[Input] Name: a
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Alpha
+
+===== DrawShapeOutline =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Input] Name: amount
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Amount
+
+===== DrawShapeHighlight =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to first location with specified tag or zero if not found
+===== FindLocation =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: list
+[Out] Type: table
+[Out] Desc: Indexed table with handles to all locations with specified tag
+===== FindLocations =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Location handle
+
+[Out] Name: transform
+[Out] Type: table
+[Out] Desc: Transform of the location
+===== GetLocationTransform =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to first joint with specified tag or zero if not found
+===== FindJoint =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: list
+[Out] Type: table
+[Out] Desc: Indexed table with handles to all joints with specified tag
+===== FindJoints =====
+
+[Input] Name: joint
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Joint handle
+
+[Out] Name: broken
+[Out] Type: boolean
+[Out] Desc: True if joint is broken
+===== IsJointBroken =====
+
+[Input] Name: joint
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Joint handle
+
+[Out] Name: type
+[Out] Type: string
+[Out] Desc: Joint type
+===== GetJointType =====
+
+[Input] Name: joint
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Joint handle
+
+[Input] Name: shape
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+[Out] Name: other
+[Out] Type: number
+[Out] Desc: Other shape handle
+===== GetJointOtherShape =====
+
+[Input] Name: joint
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Joint handle
+
+[Input] Name: velocity
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Desired velocity
+
+[Input] Name: strength
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Desired strength. Default is infinite. Zero to disable.
+
+===== SetJointMotor =====
+
+[Input] Name: joint
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Joint handle
+
+[Input] Name: target
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Desired movement target
+
+[Input] Name: maxVel
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Maximum velocity to reach target. Default is infinite.
+
+[Input] Name: strength
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Desired strength. Default is infinite. Zero to disable.
+
+===== SetJointMotorTarget =====
+
+[Input] Name: joint
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Joint handle
+
+[Out] Name: max
+[Out] Type: number
+[Out] Desc: Maximum joint limit (angle or distance)
+===== GetJointLimits =====
+
+[Input] Name: joint
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Joint handle
+
+[Out] Name: movement
+[Out] Type: number
+[Out] Desc: Current joint position or angle
+===== GetJointMovement =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to first light with specified tag or zero if not found
+===== FindLight =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: list
+[Out] Type: table
+[Out] Desc: Indexed table with handles to all lights with specified tag
+===== FindLights =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Light handle
+
+[Input] Name: enabled
+[Input] Type: boolean
+[Input] Optional: false
+[Input] Description: Set to true if light should be enabled
+
+===== SetLightEnabled =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Light handle
+
+[Input] Name: r
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Red value
+
+[Input] Name: g
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Green value
+
+[Input] Name: b
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Blue value
+
+===== SetLightColor =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Light handle
+
+[Input] Name: intensity
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Desired intensity of the light
+
+===== SetLightIntensity =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Light handle
+
+[Out] Name: transform
+[Out] Type: table
+[Out] Desc: World space light transform
+===== GetLightTransform =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Light handle
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Shape handle or zero if not attached to shape
+===== GetLightShape =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Light handle
+
+[Out] Name: active
+[Out] Type: boolean
+[Out] Desc: True if light is currently emitting light
+===== IsLightActive =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Light handle
+
+[Input] Name: point
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: World space point as vector
+
+[Out] Name: affected
+[Out] Type: boolean
+[Out] Desc: Return true if point is in light cone and range
+===== IsPointAffectedByLight =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to first trigger with specified tag or zero if not found
+===== FindTrigger =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: list
+[Out] Type: table
+[Out] Desc: Indexed table with handles to all triggers with specified tag
+===== FindTriggers =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Trigger handle
+
+[Out] Name: transform
+[Out] Type: table
+[Out] Desc: Current trigger transform in world space
+===== GetTriggerTransform =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Trigger handle
+
+[Input] Name: transform
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Desired trigger transform in world space
+
+===== SetTriggerTransform =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Trigger handle
+
+[Out] Name: max
+[Out] Type: table
+[Out] Desc: Upper point of trigger bounds in world space
+===== GetTriggerBounds =====
+
+[Input] Name: trigger
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Trigger handle
+
+[Input] Name: body
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+===== IsBodyInTrigger =====
+
+[Input] Name: trigger
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Trigger handle
+
+[Input] Name: vehicle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Vehicle handle
+
+===== IsVehicleInTrigger =====
+
+[Input] Name: trigger
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Trigger handle
+
+[Input] Name: shape
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+===== IsShapeInTrigger =====
+
+[Input] Name: trigger
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Trigger handle
+
+[Input] Name: point
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Word space point as vector
+
+===== IsPointInTrigger =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Trigger handle
+
+[Input] Name: demolision
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: If true, small debris and vehicles are ignored
+
+[Out] Name: maxpoint
+[Out] Type: table
+[Out] Desc: World space point of highest point (largest Y coordinate) if not empty
+===== IsTriggerEmpty =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to first screen with specified tag or zero if not found
+===== FindScreen =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: list
+[Out] Type: table
+[Out] Desc: Indexed table with handles to all screens with specified tag
+===== FindScreens =====
+
+[Input] Name: screen
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Screen handle
+
+[Input] Name: enabled
+[Input] Type: boolean
+[Input] Optional: false
+[Input] Description: True if screen should be enabled
+
+===== SetScreenEnabled =====
+
+[Input] Name: screen
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Screen handle
+
+[Out] Name: enabled
+[Out] Type: boolean
+[Out] Desc: True if screen is enabled
+===== IsScreenEnabled =====
+
+[Input] Name: screen
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Screen handle
+
+[Out] Name: shape
+[Out] Type: number
+[Out] Desc: Shape handle or zero if none
+===== GetScreenShape =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to first vehicle with specified tag or zero if not found
+===== FindVehicle =====
+
+[Input] Name: tag
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tag name
+
+[Input] Name: global
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Search in entire scene
+
+[Out] Name: list
+[Out] Type: table
+[Out] Desc: Indexed table with handles to all vehicles with specified tag
+===== FindVehicles =====
+
+[Input] Name: vehicle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Vehicle handle
+
+[Out] Name: transform
+[Out] Type: table
+[Out] Desc: Transform of vehicle
+===== GetVehicleTransform =====
+
+[Input] Name: vehicle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Vehicle handle
+
+[Out] Name: body
+[Out] Type: number
+[Out] Desc: Main body of vehicle
+===== GetVehicleBody =====
+
+[Input] Name: vehicle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Vehicle handle
+
+[Out] Name: health
+[Out] Type: number
+[Out] Desc: Vehicle health (zero to one)
+===== GetVehicleHealth =====
+
+[Input] Name: vehicle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Vehicle handle
+
+[Out] Name: pos
+[Out] Type: table
+[Out] Desc: Driver position as vector in vehicle space
+===== GetVehicleDriverPos =====
+
+[Input] Name: vehicle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Vehicle handle
+
+[Input] Name: drive
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Reverse/forward control -1 to 1
+
+[Input] Name: steering
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Left/right control -1 to 1
+
+[Input] Name: handbrake
+[Input] Type: boolean
+[Input] Optional: false
+[Input] Description: Handbrake control
+
+===== DriveVehicle =====
+
+[Out] Name: position
+[Out] Type: table
+[Out] Desc: Player center position
+===== GetPlayerPos =====
+
+[Input] Name: includePitch
+[Input] Type: boolean
+[Input] Optional: false
+[Input] Description: Include the player pitch (look up/down) in transform
+
+[Out] Name: transform
+[Out] Type: table
+[Out] Desc: Current player transform
+===== GetPlayerTransform =====
+
+[Input] Name: transform
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Desired player transform
+
+[Input] Name: includePitch
+[Input] Type: boolean
+[Input] Optional: false
+[Input] Description: Set player pitch (look up/down) as well
+
+===== SetPlayerTransform =====
+
+[Out] Name: transform
+[Out] Type: table
+[Out] Desc: Current player camera transform
+===== GetPlayerCameraTransform =====
+
+[Input] Name: transform
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Desired player spawn transform
+
+===== SetPlayerSpawnTransform =====
+
+[Out] Name: velocity
+[Out] Type: table
+[Out] Desc: Player velocity in world space as vector
+===== GetPlayerVelocity =====
+
+[Input] Name: vehicle
+[Input] Type: value
+[Input] Optional: false
+[Input] Description: Handle to vehicle or zero to not drive.
+
+===== SetPlayerVehicle =====
+
+[Input] Name: velocity
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Player velocity in world space as vector
+
+===== SetPlayerVelocity =====
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Current vehicle handle, or zero if not in vehicle
+===== GetPlayerVehicle =====
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to grabbed shape or zero if not grabbing.
+===== GetPlayerGrabShape =====
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to grabbed body or zero if not grabbing.
+===== GetPlayerGrabBody =====
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to picked shape or zero if nothing is picked
+===== GetPlayerPickShape =====
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to picked body or zero if nothing is picked
+===== GetPlayerPickBody =====
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to interactable shape or zero
+===== GetPlayerInteractShape =====
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to interactable body or zero
+===== GetPlayerInteractBody =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Handle to screen or zero for no screen
+
+===== SetPlayerScreen =====
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to interacted screen or zero if none
+===== GetPlayerScreen =====
+
+[Input] Name: health
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Set player health (between zero and one)
+
+===== SetPlayerHealth =====
+
+[Out] Name: health
+[Out] Type: number
+[Out] Desc: Current player health
+===== GetPlayerHealth =====
+
+
+== INVALID ==
+RespawnPlayer
+
+[Input] Name: id
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tool unique identifier
+
+[Input] Name: name
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Tool name to show in hud
+
+[Input] Name: file
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Path to vox file
+
+===== RegisterTool =====
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to currently visible tool body or zero if none
+===== GetToolBody =====
+
+[Input] Name: transform
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Tool body transform
+
+[Input] Name: sway
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Tool sway amount. Default is 1.0.
+
+===== SetToolTransform =====
+
+[Input] Name: path
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Path to ogg sound file
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Sound handle
+===== LoadSound =====
+
+[Input] Name: path
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Path to ogg sound file
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Loop handle
+===== LoadLoop =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Sound handle
+
+[Input] Name: pos
+[Input] Type: table
+[Input] Optional: true
+[Input] Description: World position as vector. Default is player position.
+
+[Input] Name: volume
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Playback volume. Default is 1.0
+
+===== PlaySound =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Loop handle
+
+[Input] Name: pos
+[Input] Type: table
+[Input] Optional: true
+[Input] Description: World position as vector. Default is player position.
+
+[Input] Name: volume
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Playback volume. Default is 1.0
+
+===== PlayLoop =====
+
+[Input] Name: path
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Music path
+
+===== PlayMusic =====
+
+
+== INVALID ==
+StopMusic
+
+[Input] Name: path
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Path to sprite. Must be PNG or JPG format.
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Sprite handle
+===== LoadSprite =====
+
+[Input] Name: handle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Sprite handle
+
+[Input] Name: transform
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Transform
+
+[Input] Name: width
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Width in meters
+
+[Input] Name: height
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Height in meters
+
+[Input] Name: r
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Red color. Default 1.0.
+
+[Input] Name: g
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Green color. Default 1.0.
+
+[Input] Name: b
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Blue color. Default 1.0.
+
+[Input] Name: a
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Alpha. Default 1.0.
+
+[Input] Name: depthTest
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Depth test enabled. Default false.
+
+[Input] Name: additive
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Additive blending enabled. Default false.
+
+===== DrawSprite =====
+
+[Input] Name: layers
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Space separate list of layers
+
+===== QueryRequire =====
+
+[Input] Name: vehicle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Vehicle handle
+
+===== QueryRejectVehicle =====
+
+[Input] Name: body
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Body handle
+
+===== QueryRejectBody =====
+
+[Input] Name: shape
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Shape handle
+
+===== QueryRejectShape =====
+
+[Input] Name: origin
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Raycast origin as world space vector
+
+[Input] Name: direction
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Unit length raycast direction as world space vector
+
+[Input] Name: maxDist
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Raycast maximum distance. Keep this as low as possible for good performance.
+
+[Input] Name: radius
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Raycast thickness. Default zero.
+
+[Input] Name: rejectTransparent
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Raycast through transparent materials. Default false.
+
+[Out] Name: shape
+[Out] Type: number
+[Out] Desc: Handle to hit shape
+===== QueryRaycast =====
+
+[Input] Name: origin
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: World space point
+
+[Input] Name: maxDist
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Maximum distance. Keep this as low as possible for good performance.
+
+[Out] Name: shape
+[Out] Type: number
+[Out] Desc: Handle to closest shape
+===== QueryClosestPoint =====
+
+[Input] Name: min
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Aabb minimum point
+
+[Input] Name: max
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Aabb maximum point
+
+[Out] Name: list
+[Out] Type: table
+[Out] Desc: Indexed table with handles to all shapes in the aabb
+===== QueryAabbShapes =====
+
+[Input] Name: min
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Aabb minimum point
+
+[Input] Name: max
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Aabb maximum point
+
+[Out] Name: list
+[Out] Type: table
+[Out] Desc: Indexed table with handles to all bodies in the aabb
+===== QueryAabbBodies =====
+
+[Out] Name: position
+[Out] Type: table
+[Out] Desc: World position of loudest sound played last frame
+===== GetLastSound =====
+
+[Input] Name: point
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: World point as vector
+
+[Out] Name: depth
+[Out] Type: number
+[Out] Desc: Depth of point into water, or zero if not in water
+===== IsPointInWater =====
+
+
+== INVALID ==
+ParticleReset
+
+[Input] Name: type
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Type of particle. Can be 'smoke' or 'plain'.
+
+===== ParticleType =====
+
+[Input] Name: type
+[Input] Type: int
+[Input] Optional: false
+[Input] Description: Tile in the particle texture atlas (0-15)
+
+===== ParticleTile =====
+
+[Input] Name: r0
+[Input] Type: float
+[Input] Optional: false
+[Input] Description: Red value
+
+[Input] Name: g0
+[Input] Type: float
+[Input] Optional: false
+[Input] Description: Green value
+
+[Input] Name: b0
+[Input] Type: float
+[Input] Optional: false
+[Input] Description: Blue value
+
+[Input] Name: r1
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Red value at end
+
+[Input] Name: g1
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Green value at end
+
+[Input] Name: b1
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Blue value at end
+
+===== ParticleColor =====
+
+[Input] Name: r0
+[Input] Type: float
+[Input] Optional: false
+[Input] Description: Radius
+
+[Input] Name: r1
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: End radius
+
+[Input] Name: interpolation
+[Input] Type: string
+[Input] Optional: true
+[Input] Description: Interpolation method: linear, smooth, easein, easeout or constant. Default is linear.
+
+[Input] Name: fadein
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade in between t=0 and t=fadein. Default is zero.
+
+[Input] Name: fadeout
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade out between t=fadeout and t=1. Default is one.
+
+===== ParticleRadius =====
+
+[Input] Name: a0
+[Input] Type: float
+[Input] Optional: false
+[Input] Description: Alpha (0.0 - 1.0)
+
+[Input] Name: a1
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: End alpha (0.0 - 1.0)
+
+[Input] Name: interpolation
+[Input] Type: string
+[Input] Optional: true
+[Input] Description: Interpolation method: linear, smooth, easein, easeout or constant. Default is linear.
+
+[Input] Name: fadein
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade in between t=0 and t=fadein. Default is zero.
+
+[Input] Name: fadeout
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade out between t=fadeout and t=1. Default is one.
+
+===== ParticleAlpha =====
+
+[Input] Name: g0
+[Input] Type: float
+[Input] Optional: false
+[Input] Description: Gravity
+
+[Input] Name: g1
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: End gravity
+
+[Input] Name: interpolation
+[Input] Type: string
+[Input] Optional: true
+[Input] Description: Interpolation method: linear, smooth, easein, easeout or constant. Default is linear.
+
+[Input] Name: fadein
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade in between t=0 and t=fadein. Default is zero.
+
+[Input] Name: fadeout
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade out between t=fadeout and t=1. Default is one.
+
+===== ParticleGravity =====
+
+[Input] Name: d0
+[Input] Type: float
+[Input] Optional: false
+[Input] Description: Drag
+
+[Input] Name: d1
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: End drag
+
+[Input] Name: interpolation
+[Input] Type: string
+[Input] Optional: true
+[Input] Description: Interpolation method: linear, smooth, easein, easeout or constant. Default is linear.
+
+[Input] Name: fadein
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade in between t=0 and t=fadein. Default is zero.
+
+[Input] Name: fadeout
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade out between t=fadeout and t=1. Default is one.
+
+===== ParticleDrag =====
+
+[Input] Name: d0
+[Input] Type: float
+[Input] Optional: false
+[Input] Description: Emissive
+
+[Input] Name: d1
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: End emissive
+
+[Input] Name: interpolation
+[Input] Type: string
+[Input] Optional: true
+[Input] Description: Interpolation method: linear, smooth, easein, easeout or constant. Default is linear.
+
+[Input] Name: fadein
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade in between t=0 and t=fadein. Default is zero.
+
+[Input] Name: fadeout
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade out between t=fadeout and t=1. Default is one.
+
+===== ParticleEmissive =====
+
+[Input] Name: r0
+[Input] Type: float
+[Input] Optional: false
+[Input] Description: Rotation speed in radians per second.
+
+[Input] Name: r1
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: End rotation speed in radians per second.
+
+[Input] Name: interpolation
+[Input] Type: string
+[Input] Optional: true
+[Input] Description: Interpolation method: linear, smooth, easein, easeout or constant. Default is linear.
+
+[Input] Name: fadein
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade in between t=0 and t=fadein. Default is zero.
+
+[Input] Name: fadeout
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade out between t=fadeout and t=1. Default is one.
+
+===== ParticleRotation =====
+
+[Input] Name: s0
+[Input] Type: float
+[Input] Optional: false
+[Input] Description: Stretch
+
+[Input] Name: s1
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: End stretch
+
+[Input] Name: interpolation
+[Input] Type: string
+[Input] Optional: true
+[Input] Description: Interpolation method: linear, smooth, easein, easeout or constant. Default is linear.
+
+[Input] Name: fadein
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade in between t=0 and t=fadein. Default is zero.
+
+[Input] Name: fadeout
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade out between t=fadeout and t=1. Default is one.
+
+===== ParticleStretch =====
+
+[Input] Name: s0
+[Input] Type: float
+[Input] Optional: false
+[Input] Description: Sticky (0.0 - 1.0)
+
+[Input] Name: s1
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: End sticky (0.0 - 1.0)
+
+[Input] Name: interpolation
+[Input] Type: string
+[Input] Optional: true
+[Input] Description: Interpolation method: linear, smooth, easein, easeout or constant. Default is linear.
+
+[Input] Name: fadein
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade in between t=0 and t=fadein. Default is zero.
+
+[Input] Name: fadeout
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade out between t=fadeout and t=1. Default is one.
+
+===== ParticleSticky =====
+
+[Input] Name: c0
+[Input] Type: float
+[Input] Optional: false
+[Input] Description: Collide (0.0 - 1.0)
+
+[Input] Name: c1
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: End collide (0.0 - 1.0)
+
+[Input] Name: interpolation
+[Input] Type: string
+[Input] Optional: true
+[Input] Description: Interpolation method: linear, smooth, easein, easeout or constant. Default is linear.
+
+[Input] Name: fadein
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade in between t=0 and t=fadein. Default is zero.
+
+[Input] Name: fadeout
+[Input] Type: float
+[Input] Optional: true
+[Input] Description: Fade out between t=fadeout and t=1. Default is one.
+
+===== ParticleCollide =====
+
+[Input] Name: pos
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: World space point as vector
+
+[Input] Name: velocity
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: World space velocity as vector
+
+[Input] Name: lifetime
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Particle lifetime in seconds
+
+===== SpawnParticle =====
+
+[Input] Name: origin
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Origin in world space as vector
+
+[Input] Name: direction
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Unit length direction as world space vector
+
+[Input] Name: type
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: 0 is regular bullet (default) and 1 is rocket
+
+===== Shoot =====
+
+[Input] Name: position
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Hole center point
+
+[Input] Name: r0
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Hole radius for soft materials
+
+[Input] Name: r1
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Hole radius for medium materials. May not be bigger than r0. Default zero.
+
+[Input] Name: r2
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Hole radius for hard materials. May not be bigger than r1. Default zero.
+
+[Input] Name: silent
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Make hole without playing any break sounds.
+
+===== MakeHole =====
+
+[Input] Name: pos
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Position in world space as vector
+
+[Input] Name: size
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Explosion size from 0.5 to 4.0
+
+===== Explosion =====
+
+[Input] Name: pos
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Position in world space as vector
+
+===== SpawnFire =====
+
+[Out] Name: count
+[Out] Type: number
+[Out] Desc: Number of active fires in level
+===== GetFireCount =====
+
+[Out] Name: transform
+[Out] Type: table
+[Out] Desc: Current camera transform
+===== GetCameraTransform =====
+
+[Input] Name: transform
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: Desired camera transform
+
+[Input] Name: fov
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Optional horizontal field of view in degrees (default: 90)
+
+===== SetCameraTransform =====
+
+[Input] Name: float
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Horizontal field of view in degrees (10-170)
+
+===== SetCameraFov =====
+
+[Input] Name: pos
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: World space light position
+
+[Input] Name: r
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Red
+
+[Input] Name: g
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Green
+
+[Input] Name: b
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Blue
+
+[Input] Name: intensity
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Intensity. Default is 1.0.
+
+===== PointLight =====
+
+[Input] Name: scale
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Time scale 0.1 to 1.0
+
+===== SetTimeScale =====
+
+[Input] Name: p0
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: World space point as vector
+
+[Input] Name: p1
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: World space point as vector
+
+[Input] Name: r
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Red
+
+[Input] Name: g
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Green
+
+[Input] Name: b
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Blue
+
+[Input] Name: a
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Alpha
+
+===== DrawLine =====
+
+[Input] Name: p0
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: World space point as vector
+
+[Input] Name: p1
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: World space point as vector
+
+[Input] Name: r
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Red
+
+[Input] Name: g
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Green
+
+[Input] Name: b
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Blue
+
+[Input] Name: a
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Alpha
+
+===== DebugLine =====
+
+[Input] Name: p0
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: World space point as vector
+
+[Input] Name: r
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Red
+
+[Input] Name: g
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Green
+
+[Input] Name: b
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Blue
+
+[Input] Name: a
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Alpha
+
+===== DebugCross =====
+
+[Input] Name: name
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Name
+
+[Input] Name: value
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Value
+
+===== DebugWatch =====
+
+[Input] Name: message
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Message to display
+
+===== DebugPrint =====
+
+
+== INVALID ==
+UiMakeInteractive
+
+
+== INVALID ==
+UiPush
+
+
+== INVALID ==
+UiPop
+
+[Out] Name: width
+[Out] Type: number
+[Out] Desc: Width of draw context
+===== UiWidth =====
+
+[Out] Name: height
+[Out] Type: number
+[Out] Desc: Height of draw context
+===== UiHeight =====
+
+[Out] Name: center
+[Out] Type: number
+[Out] Desc: Half width of draw context
+===== UiCenter =====
+
+[Out] Name: middle
+[Out] Type: number
+[Out] Desc: Half height of draw context
+===== UiMiddle =====
+
+[Input] Name: r
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Red channel
+
+[Input] Name: g
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Green channel
+
+[Input] Name: b
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Blue channel
+
+[Input] Name: a
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Alpha channel. Default 1.0
+
+===== UiColor =====
+
+[Input] Name: r
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Red channel
+
+[Input] Name: g
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Green channel
+
+[Input] Name: b
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Blue channel
+
+[Input] Name: a
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Alpha channel. Default 1.0
+
+===== UiColorFilter =====
+
+[Input] Name: x
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: X component
+
+[Input] Name: y
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Y component
+
+===== UiTranslate =====
+
+[Input] Name: angle
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Angle in degrees, counter clockwise
+
+===== UiRotate =====
+
+[Input] Name: x
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: X component
+
+[Input] Name: y
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Y component. Default value is x.
+
+===== UiScale =====
+
+[Input] Name: width
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Window width
+
+[Input] Name: height
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Window height
+
+[Input] Name: clip
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Clip content outside window. Default is false.
+
+===== UiWindow =====
+
+[Out] Name: y1
+[Out] Type: number
+[Out] Desc: Bottom
+===== UiSafeMargins =====
+
+[Input] Name: alignment
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Alignment keywords
+
+===== UiAlign =====
+
+
+== INVALID ==
+UiModalBegin
+
+
+== INVALID ==
+UiModalEnd
+
+
+== INVALID ==
+UiDisableInput
+
+
+== INVALID ==
+UiEnableInput
+
+[Out] Name: receives
+[Out] Type: boolean
+[Out] Desc: True if current context receives input
+===== UiReceivesInput =====
+
+[Out] Name: y
+[Out] Type: number
+[Out] Desc: Y coordinate
+===== UiGetMousePos =====
+
+[Input] Name: w
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Width
+
+[Input] Name: h
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Height
+
+[Out] Name: inside
+[Out] Type: boolean
+[Out] Desc: True if mouse pointer is within rectangle
+===== UiIsMouseInRect =====
+
+[Input] Name: point
+[Input] Type: table
+[Input] Optional: false
+[Input] Description: 3D world position as vector
+
+[Out] Name: distance
+[Out] Type: number
+[Out] Desc: Distance to point
+===== UiWorldToPixel =====
+
+[Input] Name: x
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: X coordinate
+
+[Input] Name: y
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Y coordinate
+
+[Out] Name: direction
+[Out] Type: table
+[Out] Desc: 3D world direction as vector
+===== UiPixelToWorld =====
+
+[Input] Name: amount
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Blur amount (0.0 to 1.0)
+
+===== UiBlur =====
+
+[Input] Name: path
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Path to TTF font file
+
+[Input] Name: size
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Font size (10 to 100)
+
+===== UiFont =====
+
+[Out] Name: size
+[Out] Type: number
+[Out] Desc: Font size
+===== UiFontHeight =====
+
+[Input] Name: text
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Print text at cursor location
+
+[Input] Name: move
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Automatically move cursor vertically. Default false.
+
+[Out] Name: h
+[Out] Type: number
+[Out] Desc: Height of text
+===== UiText =====
+
+[Input] Name: text
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: A text string
+
+[Out] Name: h
+[Out] Type: number
+[Out] Desc: Height of text
+===== UiGetTextSize =====
+
+[Input] Name: width
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Maximum width of text
+
+===== UiWordWrap =====
+
+[Input] Name: r
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Red channel
+
+[Input] Name: g
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Green channel
+
+[Input] Name: b
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Blue channel
+
+[Input] Name: a
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Alpha channel
+
+[Input] Name: thickness
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Outline thickness. Default is 0.1
+
+===== UiTextOutline =====
+
+[Input] Name: r
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Red channel
+
+[Input] Name: g
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Green channel
+
+[Input] Name: b
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Blue channel
+
+[Input] Name: a
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Alpha channel
+
+[Input] Name: distance
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Shadow distance. Default is 1.0
+
+[Input] Name: blur
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Shadow blur. Default is 0.5
+
+===== UiTextShadow =====
+
+[Input] Name: w
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Width
+
+[Input] Name: h
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Height
+
+===== UiRect =====
+
+[Input] Name: path
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Path to image (PNG or JPG format)
+
+[Out] Name: h
+[Out] Type: number
+[Out] Desc: Image height
+===== UiImage =====
+
+[Input] Name: path
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Path to image (PNG or JPG format)
+
+[Out] Name: h
+[Out] Type: number
+[Out] Desc: Image height
+===== UiGetImageSize =====
+
+[Input] Name: path
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Path to image (PNG or JPG format)
+
+[Input] Name: width
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Width
+
+[Input] Name: height
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Height
+
+[Input] Name: borderWidth
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Border width
+
+[Input] Name: borderHeight
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Border height
+
+===== UiImageBox =====
+
+[Input] Name: path
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Path to sound file (OGG format)
+
+[Input] Name: volume
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Playback volume. Default 1.0
+
+[Input] Name: pitch
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Playback pitch. Default 1.0
+
+[Input] Name: pan
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Playback stereo panning (-1.0 to 1.0). Default 0.0.
+
+===== UiSound =====
+
+[Input] Name: path
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Path to looping sound file (OGG format)
+
+[Input] Name: volume
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Playback volume. Default 1.0
+
+===== UiSoundLoop =====
+
+[Input] Name: amount
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Mute by this amount (0.0 to 1.0)
+
+[Input] Name: music
+[Input] Type: boolean
+[Input] Optional: true
+[Input] Description: Mute music as well
+
+===== UiMute =====
+
+[Input] Name: path
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Path to image (PNG or JPG format)
+
+[Input] Name: borderWidth
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Border width
+
+[Input] Name: borderHeight
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Border height
+
+[Input] Name: r
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Red multiply. Default 1.0
+
+[Input] Name: g
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Green multiply. Default 1.0
+
+[Input] Name: b
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Blue multiply. Default 1.0
+
+[Input] Name: a
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Alpha channel. Default 1.0
+
+===== UiButtonImageBox =====
+
+[Input] Name: r
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Red multiply
+
+[Input] Name: g
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Green multiply
+
+[Input] Name: b
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Blue multiply
+
+[Input] Name: a
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Alpha channel. Default 1.0
+
+===== UiButtonHoverColor =====
+
+[Input] Name: r
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Red multiply
+
+[Input] Name: g
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Green multiply
+
+[Input] Name: b
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Blue multiply
+
+[Input] Name: a
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Alpha channel. Default 1.0
+
+===== UiButtonPressColor =====
+
+[Input] Name: dist
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Press distance
+
+===== UiButtonPressDist =====
+
+[Input] Name: text
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Text on button
+
+[Input] Name: w
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Button width
+
+[Input] Name: h
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Button height
+
+[Out] Name: pressed
+[Out] Type: boolean
+[Out] Desc: True if user clicked button
+===== UiTextButton =====
+
+[Input] Name: path
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Image path (PNG or JPG file)
+
+[Input] Name: w
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Button width
+
+[Input] Name: h
+[Input] Type: number
+[Input] Optional: true
+[Input] Description: Button height
+
+[Out] Name: pressed
+[Out] Type: boolean
+[Out] Desc: True if user clicked button
+===== UiImageButton =====
+
+[Input] Name: w
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Button width
+
+[Input] Name: h
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Button height
+
+[Out] Name: pressed
+[Out] Type: boolean
+[Out] Desc: True if user clicked button
+===== UiBlankButton =====
+
+[Input] Name: path
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Image path (PNG or JPG file)
+
+[Input] Name: axis
+[Input] Type: string
+[Input] Optional: false
+[Input] Description: Drag axis, must be 'x' or 'y'
+
+[Input] Name: current
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Current value
+
+[Input] Name: min
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Minimum value
+
+[Input] Name: max
+[Input] Type: number
+[Input] Optional: false
+[Input] Description: Maximum value
+
+[Out] Name: done
+[Out] Type: boolean
+[Out] Desc: True if user is finished changing (released slider)
+===== UiSlider =====
+
+[Out] Name: handle
+[Out] Type: number
+[Out] Desc: Handle to the screen running this script or zero if none.
+===== UiGetScreen =====
+
